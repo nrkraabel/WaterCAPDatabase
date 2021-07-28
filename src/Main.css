@@ -1,0 +1,59 @@
+.HomeMap {
+  position: relative;
+
+  /*The background extends to the outside edge of the padding. No background is drawn beneath the border.*/
+  margin-bottom: 20px;
+}
+.HomeMap:before {
+  content: "";
+  position: absolute;
+  margin-bottom: 10px;
+  z-index: -1;
+  margin: -8px; /* same as border width */
+  border-radius: inherit; /* inherit container box's radius */
+}
+.containerHeader {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header1 {
+  height: 6vh;
+  animation: color-change 10s infinite;
+}
+@keyframes color-change {
+  0% {
+    color: rgb(148, 218, 250);
+  }
+  10% {
+    color: rgb(112, 208, 253);
+  }
+  20% {
+    color: rgb(77, 195, 250);
+  }
+  30% {
+    color: rgb(50, 184, 247);
+  }
+  40% {
+    color: rgb(4, 170, 247);
+  }
+  50% {
+    color: rgb(13, 111, 156);
+  }
+  60% {
+    color: rgb(4, 170, 247);
+  }
+  70% {
+    color: rgb(50, 184, 247);
+  }
+  80% {
+    color: rgb(77, 195, 250);
+  }
+  90% {
+    color: rgb(112, 208, 253);
+  }
+  100% {
+    color: rgb(148, 218, 250);
+  }
+}

@@ -1,0 +1,89 @@
+.formSearch {
+  display: block;
+  left: 50%;
+  top: 30%;
+  position: fixed;
+}
+.buttonSearch[type="search"] {
+  border: solid 3px #fff;
+  box-sizing: border-box;
+  font-size: 2em;
+  height: 2em;
+  margin-left: -15vw;
+  outline: solid #fc0 0;
+  padding: 0.5em;
+  transition: all 2s ease-in;
+  width: 30vw;
+  z-index: 1;
+}
+.buttonSearch[type="search"]:focus {
+  border: solid 3px #09f;
+  background-color: black;
+  color: ivory;
+}
+
+.noResults {
+  justify-content: "center";
+  align-self: center;
+  left: 50%;
+  top: 45%;
+  position: absolute;
+  transform: translate(-50%, -38%);
+}
+.searchResults {
+  justify-content: "center";
+  align-items: center;
+  display: grid;
+  left: 50%;
+  top: 45%;
+  position: absolute;
+  transform: translate(-50%, -38%);
+}
+
+.searchButton1 {
+  grid-row: 1;
+  grid-column: 1;
+  border: none;
+  background-color: transparent;
+  color: rgb(35, 120, 201);
+  text-underline-position: auto;
+  margin-top: 8px;
+}
+.searchButton2 {
+  grid-row: 2;
+  grid-column: 1;
+  border: none;
+  background-color: transparent;
+  color: rgb(35, 120, 201);
+  text-underline-position: auto;
+  margin-top: 8px;
+}
+
+.searchButton3 {
+  grid-row: 3;
+  grid-column: 1;
+  border: none;
+  background-color: transparent;
+  color: rgb(35, 120, 201);
+  text-underline-position: auto;
+  margin-top: 8px;
+}
+
+.searchButton4 {
+  grid-row: 4;
+  grid-column: 1;
+  border: none;
+  background-color: transparent;
+  color: rgb(35, 120, 201);
+  text-underline-position: auto;
+  margin-top: 8px;
+}
+.searchButton5 {
+  grid-row: 5;
+  grid-column: 1;
+  border: none;
+  background-color: transparent;
+  color: rgb(35, 120, 201);
+  text-underline-position: auto;
+  margin-top: 8px;
+}
