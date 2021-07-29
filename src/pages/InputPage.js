@@ -11,18 +11,17 @@ function inputPage() {
         <div className="align">
           <h1>Data Input</h1>
           <p>
-            If you know of water assitence programs that we do not have listed
-            please help us by inputing there details on the right. Any program
-            that relates to a specific water utility and aims to assit customers
-            we would love to hear about. If you have any question or concerns
-            you can contact us at fake@contact.info
+            If you know of water assistance programs that we do not have listed
+            please help us by inputting their details on the right. Any program
+            that relates to a specific water utility and aims to assist
+            customers we would love to hear about. If you have any questions or
+            concerns you can contact us at waterassistanceprograms@gmail.com
           </p>
           <h2>Data Usage</h2>
           <p>
-            The data collected here is review by our team and added to the
+            The data collected here is reviewed by our team and added to the
             working database. This database is used to create tools to inform
-            the public. The database is also used for research purposes and is
-            the property of WSU...{" "}
+            the public.
           </p>
           <h3>Security</h3>
           <p>

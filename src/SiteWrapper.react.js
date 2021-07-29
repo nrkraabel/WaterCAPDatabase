@@ -65,15 +65,6 @@ const navBarItems: Array<navItem> = [
     icon: "map",
     LinkComponent: withRouter(NavLink),
   },
-
-  {
-    icon: "file-text",
-    value: "Documentation",
-    to:
-      process.env.NODE_ENV === "production"
-        ? "https://tabler.github.io/tabler-react/documentation"
-        : "/documentation",
-  },
   {
     value: "About",
     icon: "user",
@@ -89,7 +80,7 @@ const navBarItems: Array<navItem> = [
 ];
 
 class SiteWrapper extends React.Component<Props> {
-  render(): React.Node {
+  render() {
     return (
       <Site.Wrapper
         headerProps={{
@@ -100,9 +91,6 @@ class SiteWrapper extends React.Component<Props> {
         navProps={{ itemsObjects: navBarItems }}
         routerContextComponentType={withRouter(RouterContextProvider)}
         footerProps={{
-          links: [],
-          note: "Put info on links here",
-          credits: <React.Fragment>Credits and copyright</React.Fragment>,
           nav: (
             <React.Fragment>
               <Grid.Col auto={true}>
@@ -111,16 +99,16 @@ class SiteWrapper extends React.Component<Props> {
               <Grid.Col auto={true}>
                 <List className="list-inline list-inline-dots mb-0">
                   <List.Item className="list-inline-item">
-                    <a href="./docs/index.html">Documentation</a>
+                    <a href="./data_doc">Documentation</a>
                   </List.Item>
                   <List.Item className="list-inline-item">
-                    <a href="./faq.html">FAQ</a>
+                    <a href="./search">Search</a>
                   </List.Item>
                 </List>
               </Grid.Col>
               <Grid.Col auto={true}>
                 <Button
-                  // href="" link to our contact page
+                  href="./about"
                   size="sm"
                   outline
                   color="primary"

@@ -57,3 +57,22 @@
     color: rgb(148, 218, 250);
   }
 }
+
+.textbox1 {
+  width: 35vw;
+  height: 35vh;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(20vh - 150px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+}
+
+.smallFootnote {
+  text-align: center;
+  font-size: 8pt;
+}
