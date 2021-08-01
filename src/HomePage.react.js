@@ -2,7 +2,6 @@
 
 import React from "react";
 import "./Main.css";
-import $ from "jquery";
 
 import { Page, Grid, Card, colors } from "tabler-react";
 import MapElement from "./components/MapElements.react";
@@ -19,17 +18,17 @@ function Home() {
           <Grid.Col lg={6}>
             <h1 className="header1">Water Assistance Programs</h1>
             <p className>
-              This water assistance program tracker uses data collected by both
-              the EPA and our own resources to track the water assistance
-              programs create by water utilities these programs fall into 5
-              categories: Bill Discount, Temporary Assistance, Water Efficiency,
-              Flexible Terms, Lifeline Rates. There are 361 programs tracked
-              from 231 utilities spanning 40 states. We examined 329 Utilities
-              with 130 of them not offering any registerable assistance program.
-              If you notice any inaccuracies in the data, out-of-date data, or
-              are know of a program we do not have listed please contact us
-              either through waterassistanceprograms@gmail.com or our data input
-              page.
+              This website tracks utilities water assistance programs using data
+              collected by both the EPA and our resources to track the water
+              assistance programs create by water utilities these programs fall
+              into 5 categories: Bill Discount, Temporary Assistance, Water
+              Efficiency, Flexible Terms, Lifeline Rates. There are 361 programs
+              tracked from 231 utilities spanning 40 states. We examined 329
+              Utilities with 130 of them not offering any registerable
+              assistance program. If you notice any inaccuracies in the data,
+              out-of-date data, or know of a program we do not have listed
+              please contact us either through waterassistanceprograms@gmail.com
+              or our data input page.
             </p>
           </Grid.Col>
           <Grid.Col>
@@ -66,8 +65,9 @@ function Home() {
                     },
                     names: {
                       // name of each serie
-                      data1: "Number of Utilities with WAPS",
-                      data2: "Number of Utilities surveyed without WAPS",
+                      data1: "Number of Utilities with Water Assistance",
+                      data2:
+                        "Number of Utilities surveyed without Water Assistance",
                     },
                   }}
                   legend={{

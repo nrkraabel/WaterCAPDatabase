@@ -21,7 +21,7 @@ function SearchResults(props) {
         onClick={() => {
           selected = props.results[0].item;
           history.push({
-            pathname: "/CAPInfo",
+            pathname: "/programinfo",
             state: { selected },
           });
         }}
@@ -34,7 +34,7 @@ function SearchResults(props) {
           onClick={() => {
             selected = props.results[1].item;
             history.push({
-              pathname: "/CAPInfo",
+              pathname: "/programinfo",
               state: { selected },
             });
           }}
@@ -48,7 +48,7 @@ function SearchResults(props) {
           onClick={() => {
             selected = props.results[2].item;
             history.push({
-              pathname: "/CAPInfo",
+              pathname: "/programinfo",
               state: { selected },
             });
           }}
@@ -62,7 +62,7 @@ function SearchResults(props) {
           onClick={() => {
             selected = props.results[3].item;
             history.push({
-              pathname: "/CAPInfo",
+              pathname: "/programinfo",
               state: { selected },
             });
           }}
@@ -76,7 +76,7 @@ function SearchResults(props) {
           onClick={() => {
             selected = props.results[4].item;
             history.push({
-              pathname: "/CAPInfo",
+              pathname: "/programinfo",
               state: { selected },
             });
           }}

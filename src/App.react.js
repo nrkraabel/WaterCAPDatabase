@@ -40,7 +40,7 @@ function App(props: Props): React.Node {
           <Route exact path="/map" component={MapPage} />
           <Route exact path="/data-input" component={InputPage} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/CAPInfo" component={CAPPage} />
+          <Route exact path="/programinfo" component={CAPPage} />
           <Route exact path="/search" component={SearchPage} />
 
           <Route component={Error404} />

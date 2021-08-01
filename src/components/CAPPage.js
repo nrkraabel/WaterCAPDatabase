@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Page, Grid, Card, StampCard } from "tabler-react";
+import { Redirect } from "react-router-dom";
 import SiteWrapper from "../SiteWrapper.react";
 import Dropdown from "./dropdown";
-import { firebaseApp } from "../firebase";
 
 function CAPCard({ location }) {
+  if (location.state == null) {
+    return <Redirect to="/" />;
+  }
   const CAP = location.state.selected;
 
   return (

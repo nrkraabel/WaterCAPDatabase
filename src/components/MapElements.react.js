@@ -94,11 +94,11 @@ function MapElement(props): React.Node {
               <p>{selected.program1.desc}</p>
               <Link
                 to={{
-                  pathname: "/CAPInfo",
+                  pathname: "/programinfo",
                   state: { selected },
                 }}
               >
-                CAPInfo
+                Program Info
               </Link>
             </div>
           </InfoWindow>
