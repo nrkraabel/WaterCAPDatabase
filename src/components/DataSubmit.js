@@ -44,10 +44,10 @@ const DataSubmit = () => {
   return (
     <form class="formInput" onSubmit={handleSubmit}>
       <h2 class="h2Input"> Data input</h2>
-      <p type="Name of Utilty:" class="pg">
+      <p type="Name Utilty:" class="pg">
         <input
           class="inputBox"
-          placeholder="Write the utilies offical name here.."
+          placeholder="Write the offical name of the utilty here.."
           value={UtilityName}
           onChange={(e) => setUtilityName(e.target.value)}
         />

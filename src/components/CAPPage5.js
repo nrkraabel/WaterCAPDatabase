@@ -4,7 +4,7 @@ import { Redirect, useHistory } from "react-router-dom";
 import SiteWrapper from "../SiteWrapper.react";
 import "./CAPPage.css";
 
-function CAPCard({ location }) {
+function CAPCard5({ location }) {
   const history = useHistory();
   if (location.state == null) {
     return <Redirect to="/" />;
@@ -60,38 +60,30 @@ function CAPCard({ location }) {
               {CAP.utility}, {CAP.state_abbrv}{" "}
             </Page.Title>
             <Card
-              title={CAP.program1.name}
+              title={CAP.program6.name}
               isCollapsible
               isClosable
-              body={CAP.program1.desc}
+              body={CAP.program6.desc}
             />
             <Card
               title="Eligilibity"
               isCollapsible
               isClosable
-              body={CAP.program1.eligilibity}
+              body={CAP.program6.eligilibity}
             />
-            <a href={CAP.program1.URL} rel="noreferrer" className="LinkUtility">
-              Click to view utility’s website for this program{""}
+            <a href={CAP.program6.URL} rel="noreferrer" className="LinkUtility">
+              Click to view utility’s website for this program
             </a>
             <p></p>
             {CAP.programNum > 1 && (
               <div class="box">
                 <select onChange={(event) => handleSelection(event)}>
+                  <option value="6">{CAP.program6.name}</option>
                   <option value="1">{CAP.program1.name}</option>
                   <option value="2">{CAP.program2.name}</option>
-                  {CAP.programNum > 2 ? (
-                    <option value="3">{CAP.program3.name}</option>
-                  ) : null}
-                  {CAP.programNum > 3 ? (
-                    <option value="4">{CAP.program4.name}</option>
-                  ) : null}
-                  {CAP.programNum > 4 ? (
-                    <option value="5">{CAP.program5.name}</option>
-                  ) : null}
-                  {CAP.programNum > 5 ? (
-                    <option value="6">{CAP.program6.name}</option>
-                  ) : null}
+                  <option value="3">{CAP.program3.name}</option>
+                  <option value="4">{CAP.program4.name}</option>
+                  <option value="5">{CAP.program5.name}</option>
                 </select>
               </div>
             )}
@@ -151,4 +143,4 @@ function CAPCard({ location }) {
   );
 }
 
-export default CAPCard;
+export default CAPCard5;

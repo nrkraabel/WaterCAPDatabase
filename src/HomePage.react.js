@@ -5,6 +5,7 @@ import "./Main.css";
 
 import { Page, Grid, Card, colors } from "tabler-react";
 import MapElement from "./components/MapElements.react";
+import SearchBar from "./components/SearchBar";
 
 import C3Chart from "react-c3js";
 
@@ -14,31 +15,47 @@ function Home() {
     <SiteWrapper>
       <div className="containerHeader"></div>
       <Page.Content>
-        <Grid.Row cards={true}>
+        <Grid.Row>
           <Grid.Col lg={6}>
             <h1 className="header1">Water Assistance Programs</h1>
             <p className>
-              This website tracks utilities water assistance programs using data
-              collected by both the EPA and our resources to track the water
-              assistance programs create by water utilities these programs fall
-              into 5 categories: Bill Discount, Temporary Assistance, Water
-              Efficiency, Flexible Terms, Lifeline Rates. There are 361 programs
-              tracked from 231 utilities spanning 40 states. We examined 329
-              Utilities with 130 of them not offering any registerable
-              assistance program. If you notice any inaccuracies in the data,
-              out-of-date data, or know of a program we do not have listed
-              please contact us either through waterassistanceprograms@gmail.com
-              or our data input page.
+              Helping keep water bills affordable to all households is an
+              important goal. This database tracks programs that U.S. water
+              utilities use to help customers in need pay their water bills.
+              Although we list information on 361 programs tracked from 231
+              utilities spanning 40 states, we do not claim the database is
+              comprehensive or representative. It uses data collected by both
+              the EPA{" "}
+              <a href="https://www.epa.gov/sites/default/files/2016-04/documents/dw-ww_utilities_cap_combined_508-front2.pdf#:~:text=In%20response%2C%20a%20number%20of%20water%20and%20wastewater,%E2%80%9Cwater%20services%E2%80%9D%20or%20%E2%80%9Cwater%20utilities%E2%80%9D%20throughout%20this%20document%29.">
+                (LINK TO REPORT)
+              </a>{" "}
+              and Washington State University researchers, but we hope utility
+              staff and other researchers will help us add and edit data to
+              improve it. Building on the EPA’s categorization, we classify
+              programs as Bill Discount, Temporary Assistance, Water Efficiency,
+              Flexible Terms, and Lifeline Rates
+              <a href="./data_doc"> (for more definitions, click here)</a>. To
+              find programs for a specific utility, hover over the area on the
+              map below or search for the utility to the right. The database
+              then provides more detailed information on the type of assistance,
+              eligibility, and our estimate of the financial value of the
+              program.
             </p>
           </Grid.Col>
-          <Grid.Col>
-            <div className="HomeMap">
-              <MapElement height="55vh" width="35vw" zoom={4} />
-              <p className="smallFootnote">
-                This map uses approximate locations of utilities.
-              </p>
+          <Grid.Col lg={6}>
+            <div className="SearchHome">
+              <SearchBar />
             </div>
           </Grid.Col>
+        </Grid.Row>
+
+        <Grid.Row>
+          <div className="HomeMap">
+            <MapElement height="50vh" width="78.4vw" zoom={4.3} />
+            <p className="smallFootnote">
+              This map uses approximate locations of utilities.
+            </p>
+          </div>
         </Grid.Row>
 
         <Grid.Row>
@@ -128,18 +145,18 @@ function Home() {
           </Grid.Col>
           <Grid.Col sm={3}>
             <Card
-              title="None Utility Specific Programs"
+              title="For Customers"
               isCollapsible
               isClosable
-              body="Our database only tracks utility-specific programs if you can’t find a program that your utility provides here look at your local salvation army chapter as many provide bill assistance for those struggling to make ends meet. There are also many other charitable organizations that provide some form of utility assistance that will not be tracked in our database."
+              body="This database is primarily targeted to water professionals and academics. It is not include all programs in the US and we cannot guarantee it is up to date. If you are a customer seeking help with your bill, consult this database but also contact your utility or dial 411"
             />
           </Grid.Col>
           <Grid.Col sm={3}>
             <Card
-              title="Data Integrity "
+              title="For Utility Staff"
               isCollapsible
               isClosable
-              body="Data is updated monthly and all are data is human reviewed. If you find any inaccuracies please let us know"
+              body="Data is updated monthly and all data is reviewed by a staff member. If you are an employee of a utility that has an assistance program that is either missing from our database or represented incorrectly, please help us improve the tool. Please contact us (email hotlink) or use our data input tool (Link to page)"
             />
           </Grid.Col>
         </Grid.Row>

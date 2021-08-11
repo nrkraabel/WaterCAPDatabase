@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Fuse from "fuse.js";
 import { firebaseApp } from "../firebase";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./SearchBarStyle.css";
 
 function SearchResults(props) {

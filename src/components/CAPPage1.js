@@ -4,7 +4,7 @@ import { Redirect, useHistory } from "react-router-dom";
 import SiteWrapper from "../SiteWrapper.react";
 import "./CAPPage.css";
 
-function CAPCard({ location }) {
+function CAPCard1({ location }) {
   const history = useHistory();
   if (location.state == null) {
     return <Redirect to="/" />;
@@ -60,26 +60,26 @@ function CAPCard({ location }) {
               {CAP.utility}, {CAP.state_abbrv}{" "}
             </Page.Title>
             <Card
-              title={CAP.program1.name}
+              title={CAP.program2.name}
               isCollapsible
               isClosable
-              body={CAP.program1.desc}
+              body={CAP.program2.desc}
             />
             <Card
               title="Eligilibity"
               isCollapsible
               isClosable
-              body={CAP.program1.eligilibity}
+              body={CAP.program2.eligilibity}
             />
-            <a href={CAP.program1.URL} rel="noreferrer" className="LinkUtility">
-              Click to view utility’s website for this program{""}
+            <a href={CAP.program2.URL} rel="noreferrer" className="LinkUtility">
+              Click to view utility’s website for this program
             </a>
             <p></p>
             {CAP.programNum > 1 && (
               <div class="box">
                 <select onChange={(event) => handleSelection(event)}>
-                  <option value="1">{CAP.program1.name}</option>
                   <option value="2">{CAP.program2.name}</option>
+                  <option value="1">{CAP.program1.name}</option>
                   {CAP.programNum > 2 ? (
                     <option value="3">{CAP.program3.name}</option>
                   ) : null}
@@ -151,4 +151,4 @@ function CAPCard({ location }) {
   );
 }
 
-export default CAPCard;
+export default CAPCard1;

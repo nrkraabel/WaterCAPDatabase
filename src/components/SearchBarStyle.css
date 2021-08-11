@@ -1,43 +1,40 @@
 .formSearch {
-  display: block;
+  position: absolute;
+
   left: 50%;
-  top: 30%;
-  position: fixed;
 }
 .buttonSearch[type="search"] {
   border: solid 3px #fff;
   box-sizing: border-box;
-  font-size: 2em;
+  font-size: 2.2em;
+  text-align: center;
   height: 2em;
   margin-left: -15vw;
   outline: solid #fc0 0;
   padding: 0.5em;
   transition: all 2s ease-in;
   width: 30vw;
+
   z-index: 1;
 }
 .buttonSearch[type="search"]:focus {
   border: solid 3px #09f;
-  background-color: black;
-  color: ivory;
 }
 
 .noResults {
   justify-content: "center";
   align-self: center;
   left: 50%;
-  top: 45%;
   position: absolute;
-  transform: translate(-50%, -38%);
+  transform: translate(-50%, 42%);
 }
 .searchResults {
   justify-content: "center";
   align-items: center;
+  position: absolute;
   display: grid;
   left: 50%;
-  top: 45%;
-  position: absolute;
-  transform: translate(-50%, -38%);
+  transform: translate(-50%, 42%);
 }
 
 .searchButton1 {

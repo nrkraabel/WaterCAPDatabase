@@ -98,7 +98,7 @@ function MapElement(props): React.Node {
                   state: { selected },
                 }}
               >
-                Program Info
+                Click here for program info
               </Link>
             </div>
           </InfoWindow>

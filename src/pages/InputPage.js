@@ -12,10 +12,10 @@ function inputPage() {
           <h1>Data Input</h1>
           <p>
             If you know of water assistance programs that we do not have listed
-            please help us by inputting their details on the right. Any program
-            that relates to a specific water utility and aims to assist
-            customers we would love to hear about. If you have any questions or
-            concerns you can contact us at waterassistanceprograms@gmail.com
+            please help us by inputting the details on the right. We will follow
+            up to verify information before publicly posting. If you have any
+            questions or would like to suggest corrections to existing entries
+            in the data please contact us at waterassistanceprograms@gmail.com
           </p>
           <h2>Data Usage</h2>
           <p>

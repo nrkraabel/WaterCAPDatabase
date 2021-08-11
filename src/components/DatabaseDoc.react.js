@@ -5,13 +5,13 @@ import "firebase/firestore";
 
 import { Page, Grid, Card } from "tabler-react";
 import SiteWrapper from "../SiteWrapper.react";
-function DocPage(): React.Node {
+function DocPage() {
   return (
     <SiteWrapper>
       <Page.Content>
         <Grid.Row>
           <Grid.Col>
-            <h1>Program Qualifcations</h1>
+            <h1>Program Qualifications</h1>
             <p>
               In order for a program to be recorded, it had to fall into one of
               the type categories, be publicly advertised online, and be
@@ -21,12 +21,13 @@ function DocPage(): React.Node {
           <Grid.Col>
             <h1>Data Collection</h1>
             <p>
-              The data is compiled from an EPA report and data gathered from
-              utilities listed in water rate databases. Data was collected by
-              examining utilities and municipalities websites along with
-              contacting utilities directly via the phone. data from the EPA
-              dates to 2016 however, it was reexamined and updated along with
-              the new data collection over the summer of 2021.
+              The data was compiled from an EPA report and data gathered from
+              utilities listed in water rate databases in the summer of 2021.
+              Data was collected by examining utilities and municipalities
+              websites along with contacting utilities directly via the phone.
+              Data from the 2016 EPA report was reexamined and updated along
+              with the new data collection in summer 2021. There were 329
+              utilities examined, 130 had no programs.
             </p>
           </Grid.Col>
         </Grid.Row>
@@ -74,7 +75,7 @@ function DocPage(): React.Node {
               isCollapsible
               isCollapsed
               isClosable
-              body="Utilities subsidize water efficiency measures by providing financial assistance for leak repairs and offering rebates for WaterSense-certified fixtures, toilets, and appliances. Also known as water conservation."
+              body="Utilities subsidize water efficiency measures by providing financial assistance for leak repairs and offering rebates for WaterSense-certified fixtures, toilets, and appliances. Also known as water conservation. Only included if specifically targeted to low-income groups."
             />
           </Grid.Col>
           <Grid.Col md={6} xl={4}>

@@ -2,16 +2,12 @@
   position: relative;
 
   /*The background extends to the outside edge of the padding. No background is drawn beneath the border.*/
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.HomeMap:before {
-  content: "";
-  position: absolute;
-  margin-bottom: 10px;
-  z-index: -1;
-  margin: -8px; /* same as border width */
-  border-radius: inherit; /* inherit container box's radius */
-}
+
 .containerHeader {
   margin-top: 1%;
   display: flex;
@@ -75,4 +71,13 @@
 .smallFootnote {
   text-align: center;
   font-size: 8pt;
+}
+
+.SearchHome {
+  margin-top: 3vh;
+  margin-bottom: 35vh;
+}
+
+.aboutHeader {
+  font-size: 12;
 }

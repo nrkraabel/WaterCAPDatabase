@@ -4,38 +4,9 @@ import * as React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 import { ReactComponent as WSULogo } from "./WSUCAHNRSSized.svg";
 
-import {
-  Site,
-  Nav,
-  Grid,
-  List,
-  Button,
-  RouterContextProvider,
-} from "tabler-react";
+import { Site, Grid, List, Button, RouterContextProvider } from "tabler-react";
 
-type Props = {|
-  +children: React.Node,
-|};
-
-type subNavItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +LinkComponent?: React.ElementType,
-  +useExact?: boolean,
-|};
-
-type navItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +active?: boolean,
-  +LinkComponent?: React.ElementType,
-  +subItems?: Array<subNavItem>,
-  +useExact?: boolean,
-|};
-
-const navBarItems: Array<navItem> = [
+const navBarItems = [
   {
     value: "Home",
     to: "/",
@@ -44,7 +15,7 @@ const navBarItems: Array<navItem> = [
     useExact: true,
   },
   {
-    value: "Database",
+    value: "Data and Documentation",
     icon: "server",
     subItems: [
       {
@@ -60,7 +31,7 @@ const navBarItems: Array<navItem> = [
     ],
   },
   {
-    value: "Map",
+    value: "FullScreen Map",
     to: "/map",
     icon: "map",
     LinkComponent: withRouter(NavLink),
@@ -71,15 +42,9 @@ const navBarItems: Array<navItem> = [
     to: "/about",
     LinkComponent: withRouter(NavLink),
   },
-  {
-    value: "Search Data",
-    to: "/search",
-    icon: "search",
-    LinkComponent: withRouter(NavLink),
-  },
 ];
 
-class SiteWrapper extends React.Component<Props> {
+class SiteWrapper extends React.Component {
   render() {
     return (
       <Site.Wrapper

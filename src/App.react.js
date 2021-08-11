@@ -18,6 +18,11 @@ import HomePage from "./HomePage.react";
 
 import DatabaseDoc from "./components/DatabaseDoc.react";
 import CAPPage from "./components/CAPPage";
+import CAPPage1 from "./components/CAPPage1";
+import CAPPage2 from "./components/CAPPage2";
+import CAPPage3 from "./components/CAPPage3";
+import CAPPage4 from "./components/CAPPage4";
+import CAPPage5 from "./components/CAPPage5";
 
 import "tabler-react/dist/Tabler.css";
 
@@ -41,6 +46,11 @@ function App(props: Props): React.Node {
           <Route exact path="/data-input" component={InputPage} />
           <Route exact path="/about" component={About} />
           <Route exact path="/programinfo" component={CAPPage} />
+          <Route exact path="/programinfo1" component={CAPPage1} />
+          <Route exact path="/programinfo2" component={CAPPage2} />
+          <Route exact path="/programinfo3" component={CAPPage3} />
+          <Route exact path="/programinfo4" component={CAPPage4} />
+          <Route exact path="/programinfo5" component={CAPPage5} />
           <Route exact path="/search" component={SearchPage} />
 
           <Route component={Error404} />
