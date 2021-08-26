@@ -25,9 +25,9 @@ function Home() {
               Although we list information on 361 programs tracked from 231
               utilities spanning 40 states, we do not claim the database is
               comprehensive or representative. It uses data collected by both
-              the EPA{" "}
+              the{" "}
               <a href="https://www.epa.gov/sites/default/files/2016-04/documents/dw-ww_utilities_cap_combined_508-front2.pdf#:~:text=In%20response%2C%20a%20number%20of%20water%20and%20wastewater,%E2%80%9Cwater%20services%E2%80%9D%20or%20%E2%80%9Cwater%20utilities%E2%80%9D%20throughout%20this%20document%29.">
-                (LINK TO REPORT)
+                EPA
               </a>{" "}
               and Washington State University researchers, but we hope utility
               staff and other researchers will help us add and edit data to
@@ -43,6 +43,7 @@ function Home() {
             </p>
           </Grid.Col>
           <Grid.Col lg={6}>
+            <h2 className="searchh2">Search for specific utilities</h2>
             <div className="SearchHome">
               <SearchBar />
             </div>
@@ -109,11 +110,11 @@ function Home() {
                   data={{
                     columns: [
                       // each columns data
-                      ["data1", 232],
-                      ["data2", 107],
-                      ["data3", 4],
-                      ["data4", 104],
-                      ["data5", 29],
+                      ["data1", 182],
+                      ["data2", 122],
+                      ["data3", 5],
+                      ["data4", 72],
+                      ["data5", 21],
                     ],
                     type: "pie", // default type of chart
                     colors: {
@@ -156,7 +157,7 @@ function Home() {
               title="For Utility Staff"
               isCollapsible
               isClosable
-              body="Data is updated monthly and all data is reviewed by a staff member. If you are an employee of a utility that has an assistance program that is either missing from our database or represented incorrectly, please help us improve the tool. Please contact us (email hotlink) or use our data input tool (Link to page)"
+              body="Data is updated monthly and all data is reviewed by a staff member. If you are an employee of a utility that has an assistance program that is either missing from our database or represented incorrectly, please help us improve the tool. Please contact us through are email waterassistanceprograms@gmail.com or use our data input tool on the data input page."
             />
           </Grid.Col>
         </Grid.Row>

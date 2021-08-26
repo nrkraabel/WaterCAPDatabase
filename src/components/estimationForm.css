@@ -1,3 +1,24 @@
+.buttonSubmit {
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: #78788c;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.buttonSubmit:hover {
+  border: 2px solid black;
+  background: black;
+  color: #fff;
+}
+.estimationDiv {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+}
+
 .box p {
   text-align: justify;
   margin-top: 17px;
@@ -23,9 +44,4 @@
 
 .box select option {
   padding: 30px;
-}
-.LinkUtility {
-  font-size: 15pt;
-  font-style: Bold;
-  margin-bottom: 10px;
 }

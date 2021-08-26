@@ -9,6 +9,7 @@ import InputPage from "./InputPage";
 import About from "./About";
 import MapPage from "./MapPage";
 import SearchPage from "./SearchPage";
+import Estimation from "./Estimation";
 
 export {
   Error400,
@@ -22,4 +23,5 @@ export {
   About,
   MapPage,
   SearchPage,
+  Estimation,
 };

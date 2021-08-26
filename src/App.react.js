@@ -12,6 +12,7 @@ import {
   About,
   MapPage,
   SearchPage,
+  Estimation,
 } from "./pages";
 
 import HomePage from "./HomePage.react";
@@ -26,9 +27,7 @@ import CAPPage5 from "./components/CAPPage5";
 
 import "tabler-react/dist/Tabler.css";
 
-type Props = {||};
-
-function App(props: Props): React.Node {
+function App(props) {
   return (
     <React.StrictMode>
       <Router>
@@ -52,6 +51,7 @@ function App(props: Props): React.Node {
           <Route exact path="/programinfo4" component={CAPPage4} />
           <Route exact path="/programinfo5" component={CAPPage5} />
           <Route exact path="/search" component={SearchPage} />
+          <Route exact path="/estimation" component={Estimation} />
 
           <Route component={Error404} />
         </Switch>

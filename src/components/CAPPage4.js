@@ -12,7 +12,6 @@ function CAPCard4({ location }) {
   const CAP = location.state.selected;
   const selected = location.state.selected;
   const handleSelection = (event) => {
-    console.log(event);
     if (event.target.value === "1") {
       history.push({
         pathname: "/programinfo",
@@ -108,7 +107,7 @@ function CAPCard4({ location }) {
               color="green"
               icon="dollar-sign"
               header={
-                <div>share of eligible participants who participants</div>
+                <div>Share of eligible participants who participants</div>
               }
               footer={<div>Unknown</div>}
             />
@@ -132,7 +131,7 @@ function CAPCard4({ location }) {
                 icon="alert-circle"
                 header={
                   <div>
-                    Utility has no program to address Covid-19 financial
+                    Utility has no known program to address Covid-19 financial
                     distruption
                   </div>
                 }

@@ -110,7 +110,7 @@ function CAPCard3({ location }) {
               color="green"
               icon="dollar-sign"
               header={
-                <div>share of eligible participants who participants</div>
+                <div>Share of eligible participants who participants</div>
               }
               footer={<div>Unknown</div>}
             />
@@ -134,7 +134,7 @@ function CAPCard3({ location }) {
                 icon="alert-circle"
                 header={
                   <div>
-                    Utility has no program to address Covid-19 financial
+                    Utility has no known program to address Covid-19 financial
                     distruption
                   </div>
                 }

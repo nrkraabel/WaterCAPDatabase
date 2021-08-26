@@ -42,6 +42,12 @@ const navBarItems = [
     to: "/about",
     LinkComponent: withRouter(NavLink),
   },
+  /* {
+    value: "Nationwide Program Estimator",
+    icon: "percent",
+    to: "/estimation",
+    LinkComponent: withRouter(NavLink),
+  }, */
 ];
 
 class SiteWrapper extends React.Component {
