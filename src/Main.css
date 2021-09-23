@@ -84,3 +84,13 @@
 .searchh2 {
   text-align: center;
 }
+
+.aboutDiv {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 35vw;
+  text-align: center;
+}
+.aboutText {
+}

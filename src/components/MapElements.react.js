@@ -6,7 +6,7 @@ import { firebaseApp } from "../firebase";
 import { Link } from "react-router-dom";
 import "./InfoWindowStyle.css";
 
-import mapstyle from "./mapStyle";
+import mapstyle from "./mapStyle.js";
 import {
   GoogleMap,
   useLoadScript,
@@ -15,10 +15,7 @@ import {
 } from "@react-google-maps/api";
 
 const libraries = ["places"];
-const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh",
-};
+
 const center = {
   lat: 35.51073,
   lng: -96.4247,
@@ -29,7 +26,7 @@ const options = {
   zoomControl: true,
 };
 
-function MapElement(props): React.Node {
+function MapElement(props) {
   const mapContainerStyle = {
     width: props.width,
     height: props.height,
@@ -86,20 +83,40 @@ function MapElement(props): React.Node {
             position={{ lat: selected.Lat, lng: selected.Lng }}
             onCloseClick={() => {
               setSelected(null);
+              localStorage.removeItem(selected);
             }}
           >
             <div>
               <h1>{selected.utility}</h1>
-              <h2>{selected.program1.name}</h2>
-              <p>{selected.program1.desc}</p>
-              <Link
-                to={{
-                  pathname: "/programinfo",
-                  state: { selected },
-                }}
-              >
-                Click here for program info
-              </Link>
+              {selected.programNum === 1 && (
+                <div>
+                  <h2>This Utility has one customer assistance program.</h2>
+                  <Link
+                    to={{
+                      pathname: "/programinfo",
+                      state: { selected },
+                    }}
+                  >
+                    Click here for info on this program
+                  </Link>
+                </div>
+              )}
+              {selected.programNum > 1 && (
+                <div>
+                  <h2>
+                    This Utility has {selected.programNum} customer assistance
+                    programs.
+                  </h2>
+                  <Link
+                    to={{
+                      pathname: "/programinfo",
+                      state: { selected },
+                    }}
+                  >
+                    Click here for info on these programs
+                  </Link>
+                </div>
+              )}
             </div>
           </InfoWindow>
         ) : null}

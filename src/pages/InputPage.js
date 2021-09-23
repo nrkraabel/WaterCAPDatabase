@@ -3,6 +3,7 @@ import DataSubmit from "../components/DataSubmit";
 import SiteWrapper from "../SiteWrapper.react";
 import "../components/DataInput.css";
 import { Page } from "tabler-react";
+import SEO from "../components/SEO";
 
 function inputPage() {
   return (
@@ -31,6 +32,7 @@ function inputPage() {
         </div>
         <DataSubmit />
       </Page.Content>
+      <SEO url="data_input" />
     </SiteWrapper>
   );
 }

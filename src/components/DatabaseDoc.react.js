@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import "firebase/firestore";
+import { Link } from "react-router-dom";
 
 import { Page, Grid, Card } from "tabler-react";
 import SiteWrapper from "../SiteWrapper.react";
@@ -15,19 +16,29 @@ function DocPage() {
             <p>
               In order for a program to be recorded, it had to fall into one of
               the type categories, be publicly advertised online, and be
-              provided by or partnered with a utility
+              provided by or partnered with a utility. This is an active
+              database and therefore only displays active programs. We do not
+              record Covid-19 related programs instead we track in a binary
+              variable whether a utility offers a Covid-19 related program.
             </p>
           </Grid.Col>
           <Grid.Col>
             <h1>Data Collection</h1>
             <p>
-              The data was compiled from an EPA report and data gathered from
-              utilities listed in water rate databases in the summer of 2021.
-              Data was collected by examining utilities and municipalities
-              websites along with contacting utilities directly via the phone.
-              Data from the 2016 EPA report was reexamined and updated along
-              with the new data collection in summer 2021. There were 329
-              utilities examined, 130 had no programs.
+              The data was compiled from an{" "}
+              <a href="https://www.epa.gov/sites/default/files/2016-04/documents/dw-ww_utilities_cap_combined_508-front2.pdf#:~:text=In%20response%2C%20a%20number%20of%20water%20and%20wastewater,%E2%80%9Cwater%20services%E2%80%9D%20or%20%E2%80%9Cwater%20utilities%E2%80%9D%20throughout%20this%20document%29.">
+                EPA report
+              </a>{" "}
+              and data gathered from utilities listed in water rate databases in
+              the summer of 2021. Data was collected by examining utilities and
+              municipalities websites along with contacting utilities directly
+              via the phone. Data from the 2016{" "}
+              <a href="https://www.epa.gov/sites/default/files/2016-04/documents/dw-ww_utilities_cap_combined_508-front2.pdf#:~:text=In%20response%2C%20a%20number%20of%20water%20and%20wastewater,%E2%80%9Cwater%20services%E2%80%9D%20or%20%E2%80%9Cwater%20utilities%E2%80%9D%20throughout%20this%20document%29.">
+                EPA report
+              </a>{" "}
+              was reexamined and updated along with the new data collection in
+              summer 2021. There were 387 utilities examined, 137 had no
+              programs.
             </p>
           </Grid.Col>
         </Grid.Row>
@@ -86,6 +97,24 @@ function DocPage() {
               isClosable
               body="Any program specifically listed to address the Covid-19 pandemic. Pre existing programs that have been retrofitted to address the financial hardship of the pandemic through both an expansion of eligibility and aid. This does not include pre existing programs that have changed language or expanded because of the pandemic. "
             />
+          </Grid.Col>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Col>
+            <h2>Utilities Without Customer Assistance Programs</h2>
+            <p>
+              As part of our data collection process we examined 137 utilities
+              that did not have a customer <br />
+              assistance program you can download a pdf containing the full list
+              of these utilities below.
+            </p>
+            <Link
+              to="/pdf/Water Utilties Without CAPs.pdf"
+              target="_blank"
+              download
+            >
+              Download pdf
+            </Link>
           </Grid.Col>
         </Grid.Row>
       </Page.Content>

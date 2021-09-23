@@ -15,25 +15,21 @@ const navBarItems = [
     useExact: true,
   },
   {
-    value: "Data and Documentation",
-    icon: "server",
-    subItems: [
-      {
-        value: "Data Input",
-        to: "/data-input",
-        LinkComponent: withRouter(NavLink),
-      },
-      {
-        value: "Database Documentation",
-        to: "/data_doc",
-        LinkComponent: withRouter(NavLink),
-      },
-    ],
+    value: "Documentation",
+    icon: "file",
+    to: "/data_doc",
+    LinkComponent: withRouter(NavLink),
   },
   {
     value: "FullScreen Map",
     to: "/map",
     icon: "map",
+    LinkComponent: withRouter(NavLink),
+  },
+  {
+    value: "Data Input",
+    to: "/data-input",
+    icon: "server",
     LinkComponent: withRouter(NavLink),
   },
   {

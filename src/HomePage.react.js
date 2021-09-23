@@ -6,6 +6,7 @@ import "./Main.css";
 import { Page, Grid, Card, colors } from "tabler-react";
 import MapElement from "./components/MapElements.react";
 import SearchBar from "./components/SearchBar";
+import SEO from "./components/SEO";
 
 import C3Chart from "react-c3js";
 
@@ -88,12 +89,12 @@ function Home() {
                         "Number of Utilities surveyed without Water Assistance",
                     },
                   }}
-                  legend={{
-                    show: false, //hide legend
-                  }}
                   padding={{
                     bottom: 0,
                     top: 0,
+                  }}
+                  legend={{
+                    show: false,
                   }}
                 />
               </Card.Body>
@@ -134,7 +135,7 @@ function Home() {
                     },
                   }}
                   legend={{
-                    show: false, //hide legend
+                    show: false,
                   }}
                   padding={{
                     bottom: 0,
@@ -149,7 +150,7 @@ function Home() {
               title="For Customers"
               isCollapsible
               isClosable
-              body="This database is primarily targeted to water professionals and academics. It is not include all programs in the US and we cannot guarantee it is up to date. If you are a customer seeking help with your bill, consult this database but also contact your utility or dial 411"
+              body="This database is primarily targeted to water professionals and academics. It does not include all programs in the US and we cannot guarantee it is up to date. If you are a customer seeking help with your bill, consult this database but also contact your utility or dial 411"
             />
           </Grid.Col>
           <Grid.Col sm={3}>
@@ -162,6 +163,7 @@ function Home() {
           </Grid.Col>
         </Grid.Row>
       </Page.Content>
+      <SEO url="home" />
     </SiteWrapper>
   );
 }

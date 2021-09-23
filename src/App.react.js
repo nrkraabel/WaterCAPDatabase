@@ -11,7 +11,6 @@ import {
   InputPage,
   About,
   MapPage,
-  SearchPage,
   Estimation,
 } from "./pages";
 
@@ -50,7 +49,6 @@ function App(props) {
           <Route exact path="/programinfo3" component={CAPPage3} />
           <Route exact path="/programinfo4" component={CAPPage4} />
           <Route exact path="/programinfo5" component={CAPPage5} />
-          <Route exact path="/search" component={SearchPage} />
           <Route exact path="/estimation" component={Estimation} />
 
           <Route component={Error404} />

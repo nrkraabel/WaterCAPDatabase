@@ -14,14 +14,15 @@
   color: #fff;
 }
 .estimationDiv {
-  left: 50%;
+  left: 75%;
   position: absolute;
-  transform: translate(-50%);
+  transform: translate(-75%);
+  text-align: center;
 }
 
 .box p {
+  display: inline-block;
   text-align: justify;
-  margin-top: 17px;
   margin-bottom: 0px;
 }
 .box select {
@@ -44,4 +45,22 @@
 
 .box select option {
   padding: 30px;
+}
+.centerDiv {
+  display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.centerDiv p {
+  margin-top: 8px;
+}
+
+.formControl {
+  width: 300px;
+}
+.documentationDiv {
+  left: 25%;
+  position: absolute;
+  transform: translate(-25%);
+  text-align: center;
 }
