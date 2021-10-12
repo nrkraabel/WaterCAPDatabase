@@ -10,7 +10,7 @@ import Select from "@mui/material/Select";
 function CAPCard2({ location }) {
   const history = useHistory();
   if (location.state == null) {
-    return <Redirect to="/" />;
+    return <Redirect to="/390" />;
   }
   const CAP = location.state.selected;
   const selected = location.state.selected;
@@ -86,7 +86,7 @@ function CAPCard2({ location }) {
           <Grid.Col lg={6}>
             {CAP.programNum > 1 && (
               <div className="pageSelection">
-                <p>Select Other Programs</p>
+                <h4>Display Other Programs</h4>
                 <FormControl fullWidth variant="filled">
                   <InputLabel id="pageSelect">Programs</InputLabel>
                   <Select

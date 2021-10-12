@@ -12,6 +12,7 @@ import {
   About,
   MapPage,
   Estimation,
+  DoNotTrackPage,
 } from "./pages";
 
 import HomePage from "./HomePage.react";
@@ -50,7 +51,7 @@ function App(props) {
           <Route exact path="/programinfo4" component={CAPPage4} />
           <Route exact path="/programinfo5" component={CAPPage5} />
           <Route exact path="/estimation" component={Estimation} />
-
+          <Route exact path="/390" component={DoNotTrackPage} />
           <Route component={Error404} />
         </Switch>
       </Router>

@@ -5,7 +5,13 @@ import { NavLink, withRouter } from "react-router-dom";
 import { ReactComponent as WSULogo } from "./WSUCAHNRSSized.svg";
 
 import { Site, Grid, List, Button, RouterContextProvider } from "tabler-react";
-
+/* To add a nav add
+{
+  value: "Name displayed"
+  to: "/url_extenison"
+  icon: You can only use 
+  LinkComponent: withRouter(NavLink) 
+} */
 const navBarItems = [
   {
     value: "Home",
@@ -52,12 +58,27 @@ class SiteWrapper extends React.Component {
       <Site.Wrapper
         headerProps={{
           href: "/",
-          alt: "Water Assistance Program database",
-          imageURL: "./Images/siteLogo.svg",
+          alt: "Water",
+          imageURL: "/Images/siteLogo.svg",
         }}
         navProps={{ itemsObjects: navBarItems }}
         routerContextComponentType={withRouter(RouterContextProvider)}
         footerProps={{
+          // copyright: (
+          //   <React.Fragment>
+          //     Copyright © 2021
+          //     <a href="."> Washington State University</a>. Data collection
+          //     <a
+          //       href="https://people.ses.wsu.edu/cook/"
+          //       target="_blank"
+          //       rel="noopener noreferrer"
+          //     >
+          //       {" "}
+          //       Professor Joe Cook
+          //     </a>{" "}
+          //     All rights reserved.
+          //   </React.Fragment>
+          // ),
           nav: (
             <React.Fragment>
               <Grid.Col auto={true}>
@@ -67,9 +88,6 @@ class SiteWrapper extends React.Component {
                 <List className="list-inline list-inline-dots mb-0">
                   <List.Item className="list-inline-item">
                     <a href="./data_doc">Documentation</a>
-                  </List.Item>
-                  <List.Item className="list-inline-item">
-                    <a href="./search">Search</a>
                   </List.Item>
                 </List>
               </Grid.Col>

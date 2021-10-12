@@ -16,6 +16,7 @@ import {
 
 const libraries = ["places"];
 
+//centered to the US 48 continous states
 const center = {
   lat: 35.51073,
   lng: -96.4247,
@@ -31,15 +32,16 @@ function MapElement(props) {
     width: props.width,
     height: props.height,
   };
-  const [Programs, setPrograms] = useState([]);
+  //This parse the data from firebase for each utility the first tag is id of data set (auto generated)
+  const [Utilities, setUtilitiess] = useState([]);
   useEffect(() => {
     let dataRef = firebaseApp.database().ref();
     dataRef
       .child("1aETM15XL2pq4KFmAc3ExuooFC5dPXMx9__BpNt4eSuU")
       .child("Data")
       .on("value", (snapshot) => {
-        var Program = snapshot.val();
-        setPrograms(Program);
+        var Utility = snapshot.val();
+        setUtilitiess(Utility);
       });
   }, []);
 
@@ -47,6 +49,7 @@ function MapElement(props) {
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries,
   });
+  //To prevent rerendering the map data is saved unless data changes
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -65,7 +68,7 @@ function MapElement(props) {
         options={options}
         onLoad={onMapLoad}
       >
-        {Programs.map((marker) => (
+        {Utilities.map((marker) => (
           <Marker
             key={marker.FirebaseID}
             position={{ lat: marker.Lat, lng: marker.Lng }}

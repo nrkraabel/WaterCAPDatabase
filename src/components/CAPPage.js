@@ -8,11 +8,15 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
+/* Program Info pages aren't dramically created instead there are 6 seperate pages for each program
+since the most programs a single utility has 6 this done due to have th data is recorded. */
 function CAPCard({ location }) {
   const history = useHistory();
+  //redirects user if they don't have data or open in a new page
   if (location.state == null) {
-    return <Redirect to="/" />;
+    return <Redirect to="/390" />;
   }
+  //CAP stores location data
   const CAP = location.state.selected;
   const selected = location.state.selected;
   const handleSelection = (event) => {
@@ -85,9 +89,12 @@ function CAPCard({ location }) {
           </Grid.Col>
 
           <Grid.Col lg={6}>
+            {/*This aonly display if there is more than 1 program
+          its a program select tool so user can change what program there 
+          looking at. */}
             {CAP.programNum > 1 && (
               <div className="pageSelection">
-                <p>Select Other Programs</p>
+                <h4>Display Other Programs</h4>
                 <FormControl fullWidth variant="filled">
                   <InputLabel id="pageSelect">Programs</InputLabel>
                   <Select
@@ -133,6 +140,10 @@ function CAPCard({ location }) {
                 <div>Program Target Population: {CAP.program1.hh_targeted}</div>
               }
             />
+            {/* Stampcard don't allow logic statments inside of
+             them so instead there is logic that display stampcard 
+             with the text desired based on whether or not they have a program
+            */}
             {CAP.Covid_CAP === "Yes" ? (
               <StampCard
                 color="yellow"

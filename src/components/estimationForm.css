@@ -51,16 +51,39 @@
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.centerDiv p {
-  margin-top: 8px;
-}
-
 .formControl {
   width: 300px;
 }
-.documentationDiv {
-  left: 25%;
-  position: absolute;
-  transform: translate(-25%);
+.grid-container {
+  display: grid;
+  grid-template-columns: 30vw 25vw 25vw 25vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". right left ."
+    ". results results .";
+}
+
+.rightSide {
+  grid-area: right;
+}
+
+.leftSide {
+  grid-area: left;
+}
+.lastSection {
   text-align: center;
+  left: 50vw;
+  margin-top: 60px;
+}
+.topHeader {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.submitButton {
+  margin-bottom: 15px;
+}
+
+.buffer {
+  margin-bottom: 100px;
 }

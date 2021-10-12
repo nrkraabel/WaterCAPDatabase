@@ -10,6 +10,7 @@ import About from "./About";
 import MapPage from "./MapPage";
 import SearchPage from "./SearchPage";
 import Estimation from "./Estimation";
+import DoNotTrackPage from "./DoNotTrack";
 
 export {
   Error400,
@@ -24,4 +25,5 @@ export {
   MapPage,
   SearchPage,
   Estimation,
+  DoNotTrackPage,
 };

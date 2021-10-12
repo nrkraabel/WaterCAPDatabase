@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { db } from "../firebase";
+//This contains all the css for this element
 import "./DataInput.css";
+
+//This data is sent to waterassistanceprograms@gmail.com firebase database
 
 const DataSubmit = () => {
   const [UtilityName, setUtilityName] = useState("");
@@ -10,11 +13,12 @@ const DataSubmit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Only allows submit if Utility name, program and url are entered.
+    // notfiies user with alert of submission or issue with submission
     if (!UtilityName.trim()) {
       alert("Please Enter utility name");
       return;
     }
-    //Check for the Email TextInput
     if (!ProgramName.trim()) {
       alert("Please Enter program name");
       return;

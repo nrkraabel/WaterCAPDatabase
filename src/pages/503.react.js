@@ -4,9 +4,7 @@ import * as React from "react";
 
 import { Error503Page } from "tabler-react";
 
-type Props = {||};
-
-function Error503(props: Props): React.Node {
+function Error503(props) {
   return <Error503Page />;
 }
 

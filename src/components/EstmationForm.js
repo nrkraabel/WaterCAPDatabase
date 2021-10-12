@@ -1,9 +1,9 @@
 import "./estimationForm.css";
 import React, { useState } from "react";
 import LoadingIcons from "react-loading-icons";
-import { Page } from "tabler-react";
 import SiteWrapper from "../SiteWrapper.react";
 import SEO from "../components/SEO";
+// Ui elements from material-core documentation at https://mui.com/components/
 import {
   Checkbox,
   FormControlLabel,
@@ -22,9 +22,12 @@ function EstimationForm() {
   const [coverage, setCoverage] = useState(null);
   const [fixedCharge, setFixedCharge] = useState(true);
   const [water, setWater] = useState(null);
+  const [takeUpRate, setTakeUpRate] = useState(null);
   const [timeFrame, setTimeFrame] = useState(1);
   const [submitState, setSubmitState] = useState(0);
   const [displayResult, setDisplayResult] = useState(0);
+
+  //Selection handlers
   const handleSelectionPoverty = (event) => {
     setPoverty(event.target.value);
   };
@@ -34,6 +37,9 @@ function EstimationForm() {
   const handleSelectionWater = (event) => {
     setWater(event.target.value);
   };
+  const handleSelectionTakeUp = (event) => {
+    setTakeUpRate(event.target.value);
+  };
   const handleSelectionTime = (event) => {
     setTimeFrame(event.target.value);
   };
@@ -41,7 +47,13 @@ function EstimationForm() {
     setFixedCharge(event.target.checked);
   };
   const handleSubmit = () => {
-    if (poverty == null || coverage == null || water == null) {
+    //guarntee no false submissions
+    if (
+      poverty == null ||
+      coverage == null ||
+      water == null ||
+      takeUpRate == null
+    ) {
       alert("Please select all options");
     } else {
       setDisplayResult(0);
@@ -55,42 +67,41 @@ function EstimationForm() {
 
   return (
     <SiteWrapper>
-      <Page.Content>
-        <div className="documentationDiv">
-          <div>
-            <h3>Info about how this is all calculated</h3>
-          </div>
-          <p>Lots of cool information</p>
-        </div>
-        <div className="estimationDiv">
-          <div>
-            <h3>Calculator for Differing Programs</h3>
-          </div>
+      <div className="topHeader">
+        <h2>Calculator for Differing Programs</h2>
+      </div>
+      <div className="grid-container">
+        <div className="rightSide">
           <div className="centerDiv">
             <FormControl component="fieldset">
               <FormLabel component="legend">
-                Cut off for coverage under this program
+                Take up rate for eligible households.
               </FormLabel>
               <RadioGroup
-                aria-label="poverty rate"
-                name="poverty"
-                value={poverty}
-                onChange={(event) => handleSelectionPoverty(event)}
+                aria-label="Take up rate"
+                name="TakeUpRate"
+                value={takeUpRate}
+                onChange={(event) => handleSelectionTakeUp(event)}
               >
                 <FormControlLabel
-                  value="100"
+                  value="50"
                   control={<StyledRadio />}
-                  label="100% of federal poverty rate"
+                  label="50% of eligible individuals use the program."
                 />
                 <FormControlLabel
-                  value="150"
+                  value="60"
                   control={<StyledRadio />}
-                  label="150% of federal poverty rate"
+                  label="60% of eligible individuals use the program."
                 />
                 <FormControlLabel
-                  value="200"
+                  value="70"
                   control={<StyledRadio />}
-                  label="200% of federal poverty rate"
+                  label="70% of eligible individuals use the program."
+                />
+                <FormControlLabel
+                  value="80"
+                  control={<StyledRadio />}
+                  label="80% of eligible individuals use the program."
                 />
               </RadioGroup>
             </FormControl>
@@ -118,11 +129,13 @@ function EstimationForm() {
               </Select>
             </FormControl>
           </div>
+        </div>
 
+        <div className="leftSide">
           <div className="centerDiv">
             <FormControl component="fieldset">
               <FormLabel component="legend">
-                Cut off for coverage under this program
+                Percentage of essential water covered by the program
               </FormLabel>
               <RadioGroup
                 aria-label="Covered usage"
@@ -153,50 +166,76 @@ function EstimationForm() {
               </RadioGroup>
             </FormControl>
           </div>
-
           <div className="centerDiv">
             <FormControl className="formControl">
-              <InputLabel labelId="TimeFrame_label">Timeframe</InputLabel>
+              <InputLabel labelId="poverty_label">
+                Eligibility requirement
+              </InputLabel>
               <Select
-                labelId="TimeFrame_label"
-                id="TimeFrame"
-                value={timeFrame}
-                onChange={(event) => handleSelectionTime(event)}
+                labelId="poverty_label"
+                id="poverty"
+                value={poverty}
+                onChange={(event) => handleSelectionPoverty(event)}
               >
-                <MenuItem value={1}>Monthly</MenuItem>
-                <MenuItem value={12}>Annually</MenuItem>
+                <MenuItem value={100}>
+                  At or below 100% of federal poverty rate.
+                </MenuItem>
+                <MenuItem value={138}>
+                  At or below 138% of federal poverty rate.
+                </MenuItem>
+                <MenuItem value={200}>
+                  At or below 200% of federal poverty rate.
+                </MenuItem>
               </Select>
             </FormControl>
           </div>
-          <div>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={fixedCharge}
-                  onChange={(event) => handleSelectionFixedCharge(event)}
-                  color="primary"
-                />
-              }
-              label="Fixed Charges included"
-            ></FormControlLabel>
-          </div>
-          <div>
-            <Button variant="contained" onClick={() => handleSubmit()}>
-              Submit
-            </Button>
-          </div>
-          {submitState > 0 && (
-            <div>
-              <LoadingIcons.BallTriangle fill="#06bcee" />
-            </div>
-          )}
-          {displayResult > 0 && (
-            <div>
-              <p>100,000,000</p>
-            </div>
-          )}
         </div>
-      </Page.Content>
+      </div>
+
+      <div className="lastSection">
+        <div className="centerDiv">
+          <FormControl className="formControl">
+            <InputLabel labelId="TimeFrame_label">Timeframe</InputLabel>
+            <Select
+              labelId="TimeFrame_label"
+              id="TimeFrame"
+              value={timeFrame}
+              onChange={(event) => handleSelectionTime(event)}
+            >
+              <MenuItem value={1}>Monthly</MenuItem>
+              <MenuItem value={12}>Annually</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+        <div>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={fixedCharge}
+                onChange={(event) => handleSelectionFixedCharge(event)}
+                color="primary"
+              />
+            }
+            label="Fixed Charges included"
+          ></FormControlLabel>
+        </div>
+        <div className="submitButton">
+          <Button variant="contained" onClick={() => handleSubmit()}>
+            Submit
+          </Button>
+        </div>
+        {submitState > 0 && (
+          <div>
+            <LoadingIcons.BallTriangle fill="#06bcee" />
+          </div>
+        )}
+        {displayResult > 0 && (
+          <div>
+            <p>100,000,000</p>
+          </div>
+        )}
+      </div>
+      <div className="buffer"></div>
       <SEO url="estimation" />
     </SiteWrapper>
   );

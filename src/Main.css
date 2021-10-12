@@ -15,8 +15,11 @@
   align-items: center;
 }
 .header1 {
-  height: 6vh;
+  margin-bottom: 2vh;
   animation: color-change 10s infinite;
+}
+.pOpeningText {
+  margin-top: 2vh;
 }
 @keyframes color-change {
   0% {
@@ -87,10 +90,28 @@
 
 .aboutDiv {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  top: 50%;
+  transform: translate(0%, -50%);
   max-width: 35vw;
+}
+
+.errorDiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-.aboutText {
+.errorH1 {
+  color: rgb(194, 44, 44);
+  margin-bottom: 3pt;
+}
+.errorL {
+  font-size: 34pt;
+  font-style: bold;
+  color: red;
+}
+
+.indent {
+  padding-left: 2em;
 }

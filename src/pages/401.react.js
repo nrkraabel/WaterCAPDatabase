@@ -4,9 +4,7 @@ import * as React from "react";
 
 import { Error401Page } from "tabler-react";
 
-type Props = {||};
-
-function Error401(props: Props): React.Node {
+function Error401(props) {
   return <Error401Page />;
 }
 
